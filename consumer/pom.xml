@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.testfield.rabbit</groupId>
-    <artifactId>producer</artifactId>
+    <artifactId>consumer</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -24,7 +24,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ru.testfield.rabbit.producer.Main</mainClass>
+                            <mainClass>ru.testfield.rabbit.consumer.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

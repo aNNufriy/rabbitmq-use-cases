@@ -20,14 +20,14 @@ public class Main {
         try (Connection connection = factory.newConnection();
             Channel channel = connection.createChannel()) {
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-            while (true){
+            while (true) {
                 if(Thread.interrupted()){
                     break;
                 }else{
                     String message = "Hello World!"+ UUID.randomUUID();
                     channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
                     System.out.println(" [x] Sent '" + message + "'");
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 }
             }
         }
